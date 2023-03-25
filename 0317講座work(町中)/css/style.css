@@ -1,0 +1,119 @@
+@charset  "utf-8";
+
+
+/* cssリセット */
+
+/* 利用するタグによってこちらの内容は増やす */
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /* デフォルトの文字色、font-familyを予め当てておく */
+    color: #000000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a{
+  /* 下線を消す */
+  text-decoration:none;
+  /* 色を消す */
+  color:  inherit;
+}
+
+ul{
+  /* 左の「・」を消す */
+  list-style:none; 
+}
+
+img{
+  max-width: 100%;
+  vertical-align:bottom;
+  border:none;
+}
+
+/* 「フレックスボックス練習画像.png」を実装 */
+
+.nav_wrap{
+  max-width: 960px;
+  padding:50px;
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+ul{
+  display:flex;
+  justify-content: flex-end;
+  }
+
+  li{
+    border-right: 1px solid black;
+    padding: 10px;
+   }
+  
+   li:last-child{
+    border-right: none;
+   }
+
+   
+/* レスポンシブ対応 */
+
+@media screen and (max-width:767px){
+  .nav_wrap{
+    display:block;
+  }
+  ul{display: block;
+  }
+  li{
+    border-bottom:2px solid gray;
+    border-right: none;
+    height:20px;
+    margin-bottom:10px;
+  }
+  
+}
+
+
+/* 青い四角を配置する */
+
+.wrap{
+  max-width:960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap div{
+  width:  960px;
+  height: 300px;
+  background: rgb(0, 38, 255);
+  margin:10px;
+}
+
+/* 赤い四角を配置する */
+
+.wrap2{
+  max-width:960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrap2 div{
+  width:  300px;
+  height: 300px;
+  background: rgb(255, 0, 0);
+  margin:10px;
+}
+
