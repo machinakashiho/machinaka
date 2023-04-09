@@ -1,0 +1,101 @@
+@charset  "utf-8";
+
+/* cssリセット */
+
+/* 利用するタグによってこちらの内容は増やす */
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /* デフォルトの文字色、font-familyを予め当てておく */
+    color: #353434 ;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a{
+  /* 下線を消す */
+  text-decoration:none;
+  /* 色を消す */
+  color:  inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+
+/* 1、work2pcのレイアウトを作ってみる。
+幅960px 背景色#eeeeee  */
+
+body{
+  background-color: #eeeeee;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.picture {
+  background-color: #eeeeee;
+  width: 31.25%;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+  color:#3cb371;
+}
+
+h2 {
+  color:#3cb371;
+  margin-top: 10px;   
+  margin-left: 10px;
+  border-left: 5px solid #3cb371;
+}
+
+p{
+  margin: 10px;
+  line-height: 1.5;
+  /* line-height 文字間を開ける */
+}
+
+/* 400px以下で縦に並べる。（work2pcのレイアウトに変更）
+画像が330pxしかないのでwidth:100%で無理やり広げてください。 */
+
+@media screen and (max-width: 400px) {
+ 
+  .content {
+      display: flex;
+      display:block;
+  }
+
+  .picture {
+      width:auto;
+      margin-bottom: 30px;
+      margin: 0 20px 30px
+      /* margin: 0 20px 30px で画像の両端スペースを作る */
+  }
+
+  .picture img {
+      width:100%;
+  }
+}
+
